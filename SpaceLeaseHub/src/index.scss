@@ -1,0 +1,58 @@
+@use '/src/constants/color.constants.scss' as *;
+$font-path: '/src/assets/fonts/';
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('#{$font-path}Montserrat-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PlayfairDisplay';
+	src: url('#{$font-path}PlayfairDisplay-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html,
+body {
+	max-width: 100vw;
+	overflow-x: hidden;
+	background-color: $bgPrimary;
+	color: $text;
+	font-family: 'Montserrat';
+	min-height: 100vh;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'PlayfairDisplay';
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	cursor: pointer;
+
+	border: 2px solid $border;
+	border-radius: 7.5px;
+
+	background-color: $button;
+
+	font: inherit;
+	color: $text;
+}
+
+.hidden {
+	display: none;
+}
