@@ -1,0 +1,26 @@
+@use '/src/constants/color.constants.scss' as *;
+
+.form {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+}
+.submitButton {
+	height: 40px;
+	padding: 7.5px 15px;
+	margin: 0 auto;
+
+	border: 2px solid $border;
+	border-radius: 7.5px;
+
+	background-color: $button;
+
+	font: inherit;
+	color: $text;
+}
+@media (max-width: 400px) {
+	.div > .form > .inputDiv > input {
+		font-size: 0.8rem;
+	}
+}

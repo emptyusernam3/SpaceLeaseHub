@@ -1,0 +1,69 @@
+@use '/src/constants/color.constants.scss' as *;
+
+.inputDiv {
+	display: flex;
+	justify-content: space-between;
+
+	.iconDiv {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		border: none;
+		border-radius: 4px 0 0 4px;
+		background-color: $border;
+
+		color: $bgPrimary;
+		min-width: 30px;
+		min-height: 30px;
+	}
+
+	input {
+		padding: 4px 6px;
+		width: 100%;
+		height: 30px;
+
+		border: 1px solid $border;
+		border-radius: 4px 4px 4px 4px;
+		color: $bgPrimary;
+		background-color: $inputBg;
+
+		font-size: 1.1rem;
+	}
+	input:focus {
+		outline: none;
+	}
+
+	.passwordDiv {
+		border-radius: 0 4px 4px 0;
+	}
+	.passwordInput {
+		border-radius: 4px 0 0 4px;
+	}
+}
+.checkboxDiv {
+	user-select: none;
+	margin-left: 10px;
+	label {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 30px;
+		gap: 10px;
+
+		p {
+			text-wrap: nowrap;
+		}
+
+		input {
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
+.inputDiv .img {
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	color: $text;
+}

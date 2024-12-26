@@ -1,0 +1,70 @@
+@use '/src/constants/color.constants.scss' as *;
+
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: calc(100vh - 140px);
+
+	padding: 30px;
+}
+.loading,
+.card {
+	max-width: 1362px;
+	min-width: 300px;
+	min-height: 300px;
+	background-color: $bgSecondary;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+
+	padding: 20px;
+	border-radius: 10px;
+	border: 2px solid $border;
+
+	h1 {
+		font-size: 40px;
+	}
+	p {
+		font-size: 20px;
+	}
+}
+.imgDiv {
+	display: flex;
+	justify-content: center;
+	img {
+		max-width: calc(100vw - 200px);
+		max-height: 500px;
+	}
+}
+.backBtn {
+	position: absolute;
+	top: 80px;
+	left: 10px;
+
+	background-color: $bgSecondary;
+	border-radius: 10px;
+	border: 2px solid $border;
+}
+@media (max-width: 720px) {
+	.imgDiv img {
+		max-width: calc(100vw - 100px);
+	}
+}
+@media (max-width: 440px) {
+	.card {
+		padding: 20px 10px;
+	}
+	.imgDiv img {
+		max-width: calc(100vw - 60px);
+	}
+}
+@media (max-width: 340px) {
+	.imgDiv img {
+		max-width: calc(100vw - 40px);
+	}
+}

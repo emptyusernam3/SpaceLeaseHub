@@ -1,0 +1,119 @@
+@use '/src/constants/color.constants.scss' as *;
+
+.events {
+	table th:first-of-type,
+	table td:first-of-type {
+		input {
+			width: 56.5px;
+		}
+	}
+	table th:nth-of-type(2),
+	table td:nth-of-type(2) {
+		width: 200px;
+		max-width: 200px;
+	}
+	table th:nth-of-type(3),
+	table td:nth-of-type(3) {
+		width: 100px;
+		max-width: 100px;
+	}
+	table th:nth-of-type(4),
+	table td:nth-of-type(4) {
+		width: 100px;
+		max-width: 100px;
+	}
+	table th:nth-of-type(5),
+	table td:nth-of-type(5) {
+		width: 350px;
+		max-width: 350px;
+	}
+}
+@media (max-width: 950px) {
+	.events {
+		table th:nth-of-type(1),
+		table td:nth-of-type(1) {
+			display: none;
+		}
+	}
+}
+@media (max-width: 880px) {
+	.events {
+		table th:nth-of-type(2),
+		table td:nth-of-type(2) {
+			width: 150px;
+			max-width: 150px;
+		}
+		table th:nth-of-type(5),
+		table td:nth-of-type(5) {
+			width: 300px;
+			max-width: 300px;
+		}
+	}
+}
+@media (max-width: 780px) {
+	.events {
+		table th:nth-of-type(2),
+		table td:nth-of-type(2) {
+			width: 200px;
+			max-width: 200px;
+		}
+		table th:nth-of-type(4),
+		table td:nth-of-type(4) {
+			width: 150px;
+			max-width: 150px;
+		}
+		table th:nth-of-type(5),
+		table td:nth-of-type(5) {
+			display: none;
+		}
+	}
+}
+@media (max-width: 580px) {
+	.events {
+		table th:nth-of-type(2),
+		table td:nth-of-type(2) {
+			width: 150px;
+			max-width: 150px;
+		}
+		table th:nth-of-type(4),
+		table td:nth-of-type(4) {
+			width: 120px;
+			max-width: 120px;
+		}
+	}
+}
+@media (max-width: 490px) {
+	.events {
+		table th:nth-of-type(2),
+		table td:nth-of-type(2) {
+			width: 120px;
+			max-width: 120px;
+		}
+	}
+}
+@media (max-width: 460px) {
+	.events {
+		table th:nth-of-type(4),
+		table td:nth-of-type(4) {
+			display: none;
+		}
+	}
+}
+@media (max-width: 400px) {
+	.events {
+		table th:nth-of-type(4),
+		table td:nth-of-type(4) {
+			width: 180px;
+			max-width: 180px;
+		}
+	}
+}
+@media (max-width: 360px) {
+	.events {
+		table th:nth-of-type(4),
+		table td:nth-of-type(4) {
+			width: 140px;
+			max-width: 140px;
+		}
+	}
+}

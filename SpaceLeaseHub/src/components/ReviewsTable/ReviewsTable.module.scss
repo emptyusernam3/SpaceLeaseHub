@@ -1,0 +1,75 @@
+@use '/src/constants/color.constants.scss' as *;
+
+.reviews {
+	table th:first-of-type,
+	table td:first-of-type {
+		input {
+			width: 57px;
+		}
+	}
+	table th:nth-of-type(2),
+	table td:nth-of-type(2) {
+		width: 600px;
+		max-width: 600px;
+	}
+	table th:nth-of-type(3),
+	table td:nth-of-type(3) {
+		input {
+			display: none;
+		}
+	}
+}
+@media (max-width: 860px) {
+	.reviews {
+		table th:nth-of-type(3),
+		table td:nth-of-type(3) {
+			display: none;
+		}
+	}
+}
+@media (max-width: 800px) {
+	.reviews {
+		table th:nth-of-type(2),
+		table td:nth-of-type(2) {
+			width: 400px;
+			max-width: 400px;
+		}
+	}
+}
+@media (max-width: 560px) {
+	.reviews {
+		table th:nth-of-type(2),
+		table td:nth-of-type(2) {
+			width: 300px;
+			max-width: 300px;
+		}
+	}
+}
+@media (max-width: 460px) {
+	.reviews {
+		table th:first-of-type,
+		table td:first-of-type {
+			input {
+				width: 36px;
+			}
+			input::placeholder {
+				color: transparent;
+			}
+		}
+
+		table th:nth-of-type(2),
+		table td:nth-of-type(2) {
+			width: 260px;
+			max-width: 260px;
+		}
+	}
+}
+@media (max-width: 370px) {
+	.reviews {
+		table th:nth-of-type(2),
+		table td:nth-of-type(2) {
+			width: 240px;
+			max-width: 240px;
+		}
+	}
+}

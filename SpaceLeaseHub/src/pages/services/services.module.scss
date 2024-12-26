@@ -1,0 +1,90 @@
+@use '/src/constants/color.constants.scss' as *;
+
+.main {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 30px;
+	min-height: calc(100vh - 140px);
+	padding: 20px 0;
+}
+.defServices {
+	margin: 0 20px;
+	background-color: $bgSecondary;
+	padding: 15px;
+	border-radius: 10px;
+	border: 2px solid $border;
+
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	gap: 10px;
+
+	h2 {
+		width: 100%;
+		text-align: center;
+	}
+}
+.service {
+	background-color: $bgPrimary;
+	padding: 10px;
+	border-radius: 10px;
+	border: 2px solid $border;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	width: 200px;
+	height: 180px;
+
+	p {
+		text-wrap: wrap;
+	}
+}
+.buyButton {
+	width: 40px;
+	height: 30px;
+	margin: 0 auto;
+}
+.form {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.submitButton {
+	height: 40px;
+	padding: 7.5px 15px;
+	margin: 0 auto;
+
+	border: 2px solid $border;
+	border-radius: 7.5px;
+
+	background-color: $button;
+
+	font: inherit;
+	color: $text;
+}
+.yourFacilities {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 20px;
+	border-bottom: 4px dashed $border;
+
+	ul {
+		list-style: none;
+		display: flex;
+
+		li {
+			padding: 2.5px 5px;
+			border-bottom: 1px solid $border;
+		}
+		li:first-child {
+			width: 220px;
+		}
+		li:last-child {
+			width: 90px;
+		}
+	}
+}

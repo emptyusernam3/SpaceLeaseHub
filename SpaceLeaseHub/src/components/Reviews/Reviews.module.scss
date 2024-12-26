@@ -1,0 +1,94 @@
+@use '/src/constants/color.constants.scss' as *;
+
+.loading,
+.comments {
+	margin-top: 20px;
+	max-width: 1362px;
+	min-width: 300px;
+	background-color: $bgSecondary;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+
+	padding: 20px;
+	border-radius: 10px;
+	border: 2px solid $border;
+
+	h1 {
+		font-size: 40px;
+	}
+	p {
+		font-size: 20px;
+	}
+}
+.add {
+	input:focus {
+		outline: none;
+	}
+	hr {
+		border: none;
+		border-top: 4px dotted $border;
+		margin-bottom: 10px;
+	}
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+	gap: 5px;
+}
+.rate {
+	display: flex;
+	margin-bottom: 5px;
+	input {
+		width: 30px;
+	}
+}
+.comment {
+	font-size: 16px;
+	font-family: inherit;
+	width: 700px;
+	min-height: 60px;
+	height: fit-content;
+	max-height: 400px;
+	padding: 7.5px;
+	resize: vertical;
+	border-radius: 5px;
+}
+.comment:focus {
+	outline: none;
+}
+.submitButton {
+	padding: 2.5px 5px;
+}
+@media (max-width: 860px) {
+	.delform {
+		display: none;
+	}
+}
+@media (max-width: 800px) {
+	.comment {
+		width: 400px;
+	}
+}
+@media (max-width: 500px) {
+	.comment {
+		width: 300px;
+	}
+	.comments {
+		padding: 15px;
+	}
+}
+@media (max-width: 380px) {
+	.comment {
+		width: 280px;
+	}
+	.comments {
+		padding: 10px;
+	}
+}

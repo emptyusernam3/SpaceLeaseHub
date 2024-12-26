@@ -1,0 +1,20 @@
+$bgPrimary: #eeeeee;
+$bgSecondary: #acacac;
+$text: #111111;
+$inputBg: #444444;
+$border: #2929297a;
+$button: #b5bc98;
+
+@use 'sass:meta';
+
+meta.load-css-module {
+	$module: 'colors';
+	$exports: (
+		bgPrimary: $bgPrimary,
+		bgSecondary: $bgSecondary,
+		text: $text,
+		inputBg: $inputBg,
+		border: $border,
+		button: $button,
+	);
+}

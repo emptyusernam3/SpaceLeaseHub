@@ -1,0 +1,19 @@
+@use '/src/constants/color.constants.scss' as *;
+
+.facilityServices {
+	margin-top: 20px;
+	background-color: $bgSecondary;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+
+	padding: 20px;
+	border-radius: 10px;
+	border: 2px solid $border;
+
+	> button {
+		padding: 5px 10px;
+	}
+}

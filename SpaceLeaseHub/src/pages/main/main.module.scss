@@ -1,0 +1,17 @@
+@use '/src/constants/color.constants.scss' as *;
+
+.main {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 20px;
+	min-height: calc(100vh - 140px);
+
+	h1 {
+		text-align: center;
+		margin-top: 40px;
+	}
+	> p {
+		font-size: 20px;
+	}
+}

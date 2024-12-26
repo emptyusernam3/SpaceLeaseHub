@@ -1,0 +1,54 @@
+@use '/src/constants/color.constants.scss' as *;
+
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: calc(100vh - 140px);
+
+	padding: 30px;
+}
+.loadingDiv,
+.infoDiv {
+	background-color: $bgSecondary;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 15px;
+
+	padding: 20px;
+	border-radius: 20px;
+	border: 2px solid $border;
+}
+.infoHeader {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	h2 {
+		font-size: 30px;
+	}
+	p {
+		font-size: 20px;
+	}
+}
+.infoDiv button {
+	padding: 7.5px 15px;
+}
+.infoDiv {
+	min-width: 400px;
+	hr {
+		width: 100%;
+		border: 2px dashed $border;
+	}
+}
+@media (max-width: 470px) {
+	.infoDiv {
+		min-width: unset;
+
+		h2,
+		p {
+			text-wrap: wrap;
+		}
+	}
+}

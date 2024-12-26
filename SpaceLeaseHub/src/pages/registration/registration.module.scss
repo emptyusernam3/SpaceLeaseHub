@@ -1,0 +1,42 @@
+@use '/src/constants/color.constants.scss' as *;
+
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+.formContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	margin: 0 1.5rem;
+	padding: 1rem;
+	gap: 1rem;
+
+	width: 400px;
+
+	background-color: $bgSecondary;
+	border-radius: 1rem;
+	border: 3px solid $border;
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	hr {
+		border-color: $border;
+		width: 100%;
+	}
+}
+
+.authDiv {
+	display: flex;
+	gap: 4px;
+
+	a {
+		text-decoration: underline;
+	}
+}

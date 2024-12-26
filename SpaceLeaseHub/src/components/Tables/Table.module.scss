@@ -1,0 +1,94 @@
+@use '/src/constants/color.constants.scss' as *;
+
+.container {
+	table {
+		border-collapse: collapse;
+		margin-bottom: 20px;
+	}
+
+	table th,
+	table td {
+		border: 2px solid $text;
+		border-left: none;
+		border-right: none;
+		padding: 8px;
+	}
+	table th {
+		user-select: none;
+		border-top: none;
+	}
+}
+.filterInput {
+	margin-top: 4px;
+	padding: 4px 6px;
+
+	border: 1px solid $border;
+	border-radius: 4px;
+	color: $bgPrimary;
+	background-color: $text;
+	max-width: 100%;
+}
+.filterInput:focus {
+	outline: none;
+}
+.headerCell {
+	cursor: pointer;
+}
+.paginationDiv {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.paginationButtonsDiv {
+	display: flex;
+	gap: 15px;
+}
+.paginationButton {
+	width: 40px;
+	height: 30px;
+}
+.paginationPage {
+	display: inline-flex;
+	gap: 5px;
+	margin-right: 4px;
+}
+.paginationSelect {
+	padding: 2px 3px;
+
+	border: 1px solid $border;
+	border-radius: 4px;
+	color: $bgPrimary;
+	background-color: $text;
+}
+.paginationGoToInput {
+	margin: 0 7px;
+	padding: 2px 3px;
+
+	border: 1px solid $border;
+	border-radius: 4px;
+	color: $bgPrimary;
+	background-color: $text;
+}
+.paginationGoToInput:focus,
+.paginationSelect:focus {
+	outline: none;
+}
+@media (max-width: 460px) {
+	.GoToDiv {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+}
+@media (max-width: 340px) {
+	.container {
+		table th,
+		table td {
+			border: 1px solid $text;
+			padding: 4px;
+		}
+	}
+}
