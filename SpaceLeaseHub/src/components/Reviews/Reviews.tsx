@@ -1,4 +1,5 @@
 import { IdInputField } from '@components/inputFields/idInputField'
+import { ReviewsReport } from '@components/reports/ReviewsReport'
 import { ReviewsTable } from '@components/ReviewsTable/ReviewsTable'
 import { useReviews } from '@hooks/useReviews'
 import { IReview } from '@src/types/serverAPITypes'
@@ -69,42 +70,45 @@ export function Reviews({ facilityId, clientId }: IReviewsProps) {
 	return (
 		<>
 			{isReviewsValid ? (
-				<div className={styles.comments}>
-					{isClient && (
-						<div className={styles.add}>
-							<form className={styles.form} onSubmit={commentSubmitHandler}>
-								<div>
-									<div className={styles.rate}>
-										<label htmlFor='rate'>rate(1 - 5)</label>
-										<input type='number' id='rate' name='rate' required />
+				<>
+					<div className={styles.comments}>
+						{isClient && (
+							<div className={styles.add}>
+								<form className={styles.form} onSubmit={commentSubmitHandler}>
+									<div>
+										<div className={styles.rate}>
+											<label htmlFor='rate'>rate(1 - 5)</label>
+											<input type='number' id='rate' name='rate' required />
+										</div>
+										<textarea name='comment' className={styles.comment} placeholder='enter your review'></textarea>
 									</div>
-									<textarea name='comment' className={styles.comment} placeholder='enter your review'></textarea>
-								</div>
-								<button type='submit' className={styles.submitButton}>
-									send
-								</button>
-							</form>
-							<hr />
-							<form className={`${styles.form} ${styles.delform}`} onSubmit={commentDeleteHandler}>
-								<div>
-									<IdInputField />
-								</div>
+									<button type='submit' className={styles.submitButton}>
+										send
+									</button>
+								</form>
+								<hr />
+								<form className={`${styles.form} ${styles.delform}`} onSubmit={commentDeleteHandler}>
+									<div>
+										<IdInputField />
+									</div>
 
-								<button type='submit' className={styles.submitButton}>
-									delete
-								</button>
-							</form>
-							<hr />
-						</div>
-					)}
-					{isReviewsExists ? (
-						reviews.data && <ReviewsTable reviews={reviews.data} />
-					) : (
-						<div className={styles.loading}>
-							<h2>There are no reviews here yet</h2>
-						</div>
-					)}
-				</div>
+									<button type='submit' className={styles.submitButton}>
+										delete
+									</button>
+								</form>
+								<hr />
+							</div>
+						)}
+						{isReviewsExists ? (
+							reviews.data && <ReviewsTable reviews={reviews.data} />
+						) : (
+							<div className={styles.loading}>
+								<h2>There are no reviews here yet</h2>
+							</div>
+						)}
+					</div>
+					{isReviewsExists && reviews.data && <ReviewsReport reviews={reviews.data} />}
+				</>
 			) : (
 				<div className={styles.loading}>
 					<h2>Loading...</h2>
